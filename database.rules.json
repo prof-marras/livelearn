@@ -1,0 +1,203 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "livelearn": {
+      "classes": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$classe": {
+          ".read": "auth != null"
+        }
+      },
+      "students": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$codice": {
+          ".read": "auth != null"
+        }
+      },
+      "sessions": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".indexOn": [
+          "createdAt",
+          "status"
+        ],
+        "$code": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "quotaAlert": {
+            ".write": "auth != null"
+          }
+        }
+      },
+      "inbox": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$sessione": {
+          "$alunno": {
+            ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+          }
+        }
+      },
+      "responses": {
+        "$code": {
+          ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "$alunno": {
+            ".read": "auth != null",
+            ".write": "auth != null && (auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2' || !data.exists() || !data.child('uid').exists() || data.child('uid').val() === auth.uid)"
+          }
+        }
+      },
+      "rank": {
+        "$code": {
+          ".read": "auth != null",
+          "$id": {
+            ".write": "auth != null"
+          }
+        }
+      },
+      "control": {
+        "$code": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "history_priv": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$codice": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "activities": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "activityIndex": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+      },
+      "agentPing": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".validate": "newData.isNumber()"
+      },
+      "versionKeys": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+      },
+      "board": {
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "$msg": {
+            "readBy": {
+              "$codice": {
+                ".write": "auth != null",
+                ".validate": "newData.isBoolean()"
+              }
+            }
+          }
+        }
+      },
+      "board_priv": {
+        "$classe": {
+          ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "$codice": {
+            ".read": "auth != null",
+            ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+            "$msg": {
+              ".write": "auth != null && !data.exists() && newData.child('from').val() === 'student'",
+              "readBy": {
+                "$x": {
+                  ".write": "auth != null",
+                  ".validate": "newData.isBoolean()"
+                }
+              }
+            }
+          }
+        }
+      },
+      "lessons": {
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "agentDone": {
+        "$classe": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "fcmTokens": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$classe": {
+          "$codice": {
+            ".write": "auth != null"
+          }
+        }
+      },
+      "recovery_sessions": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        "$codice": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "$piano": {
+            "lastScore": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "attemptCount": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "lastAttemptAt": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "status": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "bestScore": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "bestAttempt": {
+              ".write": "auth != null && data.parent().exists()"
+            },
+            "attempts": {
+              "$n": {
+                ".write": "auth != null && data.parent().parent().exists() && !data.exists()"
+              }
+            }
+          }
+        }
+      },
+      "planDrafts": {
+        ".read": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+        ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+      },
+      "recovery_lookup": {
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'"
+        }
+      },
+      "aiRequests": {
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        }
+      },
+      "aiResponses": {
+        "$id": {
+          ".read": "auth != null",
+          ".write": "auth != null && auth.uid === 'ydohatHG4IY446G8KqxW2FLhwdW2'",
+          "$rid": {
+            ".write": "auth != null && !newData.exists()"
+          }
+        }
+      }
+    }
+  }
+}
